@@ -21,7 +21,7 @@ extends:
     # Visual Studio specific
     enableVsBuilds: true
     vsVersions: "16"
-    conanVsRuntimes: "MD"
+    conanVsRuntimes: "MD,MDd"
     # Apple clang specific
     enableAppleClangBuilds: true
     appleClangVersions: "10"
