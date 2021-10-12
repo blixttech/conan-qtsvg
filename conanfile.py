@@ -1,4 +1,5 @@
-from conans import ConanFile, tools
+from conans import ConanFile
+
 
 class QtSvgConan(ConanFile):
     name = "qtsvg"
@@ -14,3 +15,7 @@ class QtSvgConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     options = {"shared": [True, False]}
     default_options = {"shared": True}
+
+    module_name = "Qt5Svg"
+    libs = ["Qt5Svg"]
+
