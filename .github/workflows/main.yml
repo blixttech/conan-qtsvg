@@ -11,7 +11,6 @@ jobs:
         CONAN_NON_INTERACTIVE: 1
         CONAN_USERNAME: "blixt"
         CONAN_GIT_REF: "${{ github.ref }}"
-        CONAN_REMOTES: "https://center.conan.io@True@conancenter"
         CONAN_UPLOAD: "${{ secrets.CONAN_UPLOAD }}"
         CONAN_LOGIN_USERNAME: "${{ secrets.CONAN_LOGIN_USERNAME_UPLOAD }}"
         CONAN_PASSWORD: "${{ secrets.CONAN_PASSWORD_UPLOAD }}"
@@ -23,6 +22,7 @@ jobs:
         CONAN_BUILD_TYPES: "Release"
         CONAN_USE_DOCKER: 1
         CONAN_DOCKER_IMAGE: "conanio/gcc7"
+        CONAN_SHARED_OPTION_NAME: "False"
     steps:
       - uses: actions/checkout@v2
 
