@@ -16,6 +16,4 @@ class QtSvgConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = {"shared": True}
 
-    module_name = "Qt5Svg"
-    libs = ["Qt5Svg"]
-
+    module = "Svg"
