@@ -12,8 +12,8 @@ jobs:
         CONAN_USERNAME: "blixt"
         CONAN_GIT_REF: "${{ github.ref }}"
         CONAN_UPLOAD: "${{ secrets.CONAN_UPLOAD }}"
-        CONAN_LOGIN_USERNAME_UPLOAD: "${{ secrets.CONAN_LOGIN_USERNAME_UPLOAD }}"
-        CONAN_PASSWORD_UPLOAD: "${{ secrets.CONAN_PASSWORD_UPLOAD }}"
+        CONAN_LOGIN_USERNAME: "${{ secrets.CONAN_LOGIN_USERNAME_UPLOAD }}"
+        CONAN_PASSWORD: "${{ secrets.CONAN_PASSWORD_UPLOAD }}"
         CONAN_UPLOAD_ONLY_WHEN_STABLE: 1
         CONAN_STABLE_BRANCH_PATTERN: "stable/*"
         CONAN_SYSREQUIRES_MODE: "enabled"
