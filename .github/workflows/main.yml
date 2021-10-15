@@ -11,7 +11,6 @@ jobs:
         CONAN_NON_INTERACTIVE: 1
         CONAN_USERNAME: "blixt"
         CONAN_GIT_REF: "${{ github.ref }}"
-        CONAN_REMOTES: "${{ secrets.CONAN_UPLOAD }}"
         CONAN_UPLOAD: "${{ secrets.CONAN_UPLOAD }}"
         CONAN_LOGIN_USERNAME_UPLOAD: "${{ secrets.CONAN_LOGIN_USERNAME_UPLOAD }}"
         CONAN_PASSWORD_UPLOAD: "${{ secrets.CONAN_PASSWORD_UPLOAD }}"
@@ -35,7 +34,6 @@ jobs:
           conan --version
           pip install conan-package-tools
           pip install git+https://github.com/blixttech/cpt-helpers.git
-          conan remote add upload "${CONAN_UPLOAD}"
 
       - name: Build and Upload
         shell: bash
