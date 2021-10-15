@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  export-and-upload:
+  build-and-upload:
     runs-on: ubuntu-20.04
     env:
         DEBIAN_FRONTEND: "noninteractive"
@@ -35,6 +35,7 @@ jobs:
           conan --version
           pip install conan-package-tools
           pip install git+https://github.com/blixttech/cpt-helpers.git
+          conan remote add upload "${CONAN_UPLOAD}"
 
       - name: Build and Upload
         shell: bash
